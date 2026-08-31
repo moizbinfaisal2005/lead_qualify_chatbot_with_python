@@ -128,9 +128,9 @@ def run_app():
             st.success("✅ Lead saved locally!")
 
             # Generate sales note with Gemini
-            note = generate_sales_note(customer)
-            st.subheader("📝 Sales Note (Gemini)")
-            st.write(note)
+            # note = generate_sales_note(customer)
+            # st.subheader("📝 Sales Note (Gemini)")
+            # st.write(note)
 
     with tab2:
         st.subheader("📈 Lead Analytics")
