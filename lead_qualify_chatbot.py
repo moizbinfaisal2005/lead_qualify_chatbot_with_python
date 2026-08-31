@@ -8,7 +8,7 @@ import os
 
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")  
-client = genai.Client(api_key="api_key")
+client = genai.Client(api_key="AQ.Ab8RN6KvwhHFb0Qd1dY5TD5LGQow8-ZZjxiYJwE31VTww_9nzQ")
 MODEL_NAME = "gemini-3.7-flash"  
 
 
