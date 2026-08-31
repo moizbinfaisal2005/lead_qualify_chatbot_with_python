@@ -1,0 +1,5 @@
+# Ignore everything in project_week1
+project_week1/*
+
+# But Keep specific files in project_week1
+!project_week1/lead_qualify_chatbot.py
