@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 import json
 from io import BytesIO
-from google import genai
-from dotenv import load_dotenv
+# from google import genai
+# from dotenv import load_dotenv
 import os
 
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")  
-client = genai.Client(api_key="AQ.Ab8RN6KvwhHFb0Qd1dY5TD5LGQow8-ZZjxiYJwE31VTww_9nzQ")
-MODEL_NAME = "gemini-3.7-flash"  
+# load_dotenv()
+# api_key = os.getenv("GOOGLE_API_KEY")  
+# client = genai.Client(api_key="AQ.Ab8RN6KvwhHFb0Qd1dY5TD5LGQow8-ZZjxiYJwE31VTww_9nzQ")
+# MODEL_NAME = "gemini-3.7-flash"  
 
 
 class Customer():
@@ -76,24 +76,24 @@ def load_leads(filename="leads.json"):
     except FileNotFoundError:
         return []
 
-def generate_sales_note(customer):
-    prompt = f"""
-    Generate a concise sales note for the following customer:
-    Name: {customer.name}
-    Answers: {customer.answer}
-    Score: {customer.score}
-    Status: {customer.status}
-    """
-    try:
-       response = client.models.generate_content(
-    model=MODEL_NAME,
-    contents=[{"role": "user", "parts": [{"text": prompt}]}]
-       )
-       note = response.text.strip()
+# def generate_sales_note(customer):
+#     prompt = f"""
+#     Generate a concise sales note for the following customer:
+#     Name: {customer.name}
+#     Answers: {customer.answer}
+#     Score: {customer.score}
+#     Status: {customer.status}
+#     """
+#     try:
+#        response = client.models.generate_content(
+#     model=MODEL_NAME,
+#     contents=[{"role": "user", "parts": [{"text": prompt}]}]
+#        )
+#        note = response.text.strip()
 
-       return response.text.strip()
-    except Exception as e:
-        return f"Error generating sales note: {str(e)}"
+#        return response.text.strip()
+#     except Exception as e:
+#         return f"Error generating sales note: {str(e)}"
 
 
 def run_app():
