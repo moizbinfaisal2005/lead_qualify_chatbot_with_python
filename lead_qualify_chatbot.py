@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 from io import BytesIO
-from google import genai
+import google.genai as genai
 from dotenv import load_dotenv
 import os
 
