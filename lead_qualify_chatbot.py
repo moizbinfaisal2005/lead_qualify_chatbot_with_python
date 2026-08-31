@@ -170,6 +170,12 @@ def run_app():
             st.write("### Timeline Entries")
             st.table(timeline_df.value_counts().reset_index(name="Count"))
             st.write("### 📂 Export Leads")
+            if st.button("🗑️ Reset All Leads"):
+                with open("leads.json", "w") as f:
+                    json.dump([], f) 
+                st.success("All leads deleted! Dashboard reset.")   
+
+
             csv = df.to_csv(index=False).encode("utf-8")
             st.download_button(
                 label="⬇️ Download Leads as CSV",
