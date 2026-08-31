@@ -1,4 +1,5 @@
-<img width="684" height="437" alt="image" src="https://github.com/user-attachments/assets/b81bc77a-a29b-41fe-b8ea-ef84ac1ee266" /># Project Concept: Lead Qualification Chatbot
+# Project Concept: Lead Qualification Chatbot
+
 A chatbot that interacts with potential customers, asks structured questions (budget, timeline, need, etc.), remembers their answers, and then scores the lead to help businesses decide if the customer is worth pursuing.
 
 # Business Problem It Solves
