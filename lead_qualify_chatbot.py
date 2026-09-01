@@ -97,7 +97,7 @@ def load_leads(filename="leads.json"):
 
 
 def run_app():
-    st.title("💬 Lead Qualification Chatbot (Google GenAI)")
+    st.title("💬 Lead Qualification Chatbot ")
     st.caption("Qualify leads, generate sales notes, analyze data, and export reports.")
 
     tab1, tab2 = st.tabs(["Chatbot", "Analytics & Reports"])
